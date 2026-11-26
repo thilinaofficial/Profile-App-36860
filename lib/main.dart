@@ -24,12 +24,10 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  // profile details (change these to your own)
-  String name = 'Diluka';
-  String email = 'diluka.w@nsbm.ac.lk';
+  String name = 'Thilina Lakshan';
+  String email = 'thilinalakshan@nsbm.ac.lk';
   int points = 0;
 
-  // runs when the + button is pressed
   void addPoints() {
     setState(() {
       points = points + 1;
@@ -51,7 +49,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // profile picture
             const Center(
               child: CircleAvatar(
                 radius: 50,
@@ -62,14 +59,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 15),
             const Divider(color: Colors.black, thickness: 1),
             const SizedBox(height: 15),
-
-            // name
             const Text('Name', style: TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 5),
             Text(name),
             const SizedBox(height: 20),
-
-            // email
             const Text('Email', style: TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 5),
             Row(
@@ -80,8 +73,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
             const SizedBox(height: 20),
-
-            // points
             const Text('Points', style: TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 5),
             Row(
